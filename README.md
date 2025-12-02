@@ -21,22 +21,22 @@ Tool / Library	Purpose
 Python	Data analysis and modeling
 Pandas / NumPy	Data preparation and cleaning
 Matplotlib / Seaborn	Visualizations
-Scikit-learn	K-Means clustering and feature scaling
+Scikit-learn	K-Means clustering + feature scaling
 Jupyter Notebook	Interactive analysis workflow
 Repository Structure
-customer-segmentation-project/
+customer-segmentation-kmeans/
 │
-├── customer_segmentation.ipynb                 # Main notebook
-├── Mall_Customers.csv                          # Dataset
-├── README.md                                   # Project documentation
+├── customer_segmentation.ipynb                # Main Jupyter Notebook (analysis + clustering)
+├── Mall_Customers.csv                         # Dataset
+├── README.md                                  # Project documentation
 │
-├── images/                                     # Visual outputs
+├── images/                                    # Visual outputs
 │   ├── elbow_method.png
 │   ├── segmentation_plot.png
 │   └── cluster_summary.png
 │
 └── report/
-    └── Customer_Segmentation_Executive_Summary.docx   # Business insights report
+    └── Customer_Segmentation_Executive_Summary.docx    # Business insights report
 
 Dataset Description
 
@@ -60,67 +60,64 @@ Spending Score (1–100)
 
 Data Preparation Steps
 
-Loaded and reviewed dataset structure
+Loaded dataset and inspected structure
 
-Checked for missing values
+Checked for null values (none found)
 
 Selected features for clustering
 
-Scaled features using StandardScaler
+Scaled values using StandardScaler
 
-Prepared data matrix for K-Means modeling
+Prepared feature matrix for K-Means modeling
 
-Elbow Method — Determining Optimal Clusters
+Elbow Method – Choosing Optimal Clusters
 
-The Elbow Method identified 5 clusters as the optimal balance between compactness and separation.
+The Elbow Method indicated that 5 clusters offer the best balance of compactness and separation.
 
 Elbow Method Plot
-(images/elbow_method.png)
 
 Customer Segmentation Results (K = 5)
 
-The model produced five meaningful clusters that differ in income and spending behavior.
+K-Means produced five meaningful customer clusters based on income and spending patterns.
 
 Segmentation Visualization
-(images/segmentation_plot.png)
 
 Cluster Summary Table
-(images/cluster_summary.png)
 
-Interpretation of Clusters
+Cluster Interpretations
 Cluster	Description
-Cluster 1	High income, high spending — premium/VIP customers
-Cluster 3	High income, low spending — potential upsell opportunity
-Cluster 0	Moderate income and moderate spending
-Cluster 2	Moderate income, high spending — value-driven customers
-Cluster 4	Low income, low spending — price-sensitive segment
+1	High income, high spending — Premium / VIP customers
+3	High income, low spending — Upsell opportunity segment
+0	Moderate income, moderate spending
+2	Moderate income, high spending — Value-driven shoppers
+4	Low income, low spending — Budget-sensitive segment
 Business Insights & Recommendations
 
-Engage high-value customers with loyalty programs and exclusives
+High-value customers (Cluster 1) respond well to exclusive offers and loyalty programs
 
-Offer targeted promotions to low-spending groups
+Low-income segments (Cluster 4) may require budget-friendly promotions
 
-Upsell high-income but low-spending customers with bundles and personalized suggestions
+High-income but low-spending customers (Cluster 3) are strong upsell candidates
 
-Allocate marketing budget based on behavior rather than demographics
+Marketing campaigns should target behavior-based segments, not just demographics
 
-Use segmentation to improve campaign precision and ROI
+Segmentation supports optimized marketing spend and personalized experiences
 
 Executive Report
 
-A full business report summarizing insights and recommendations is available:
+A full business-ready summary is available:
 
-report/Customer_Segmentation_Executive_Summary.docx
+📄 report/Customer_Segmentation_Executive_Summary.docx
 
 Future Enhancements
 
-Incorporate demographic attributes (Age, Gender, etc.)
+Add demographic variables (Age, Gender) for deeper segmentation
 
-Experiment with alternative clustering algorithms (DBSCAN, GMM)
+Test alternative clustering algorithms (DBSCAN, Gaussian Mixture Models)
 
-Build an interactive Tableau or Power BI dashboard
+Deploy dashboard in Power BI or Tableau
 
-Develop customer personas for marketing teams
+Build customer personas based on behavior
 
 Author
 
