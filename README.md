@@ -1,126 +1,136 @@
-Customer Segmentation with K-Means Clustering
-Unsupervised Machine Learning for Marketing Analytics
+# Customer Segmentation with K-Means Clustering
+### Unsupervised Machine Learning for Marketing Analytics
 
-This project applies K-Means clustering to the Mall Customers dataset to identify distinct customer segments based on Annual Income and Spending Score.
+This project applies K-Means clustering to the Mall Customers dataset to identify distinct customer segments based on Annual Income and Spending Score.  
 The goal is to support targeted marketing, customer experience optimization, and data-driven business strategy.
 
-Project Objectives
+---
 
-Identify distinct customer groups based on income and spending behavior
+## Project Objectives
 
-Analyze demographic and purchasing patterns
+- Identify distinct customer groups based on income and spending behavior  
+- Analyze demographic and purchasing patterns  
+- Build an unsupervised machine learning model using K-Means  
+- Provide actionable insights for business and marketing teams  
+- Demonstrate clustering, visualization, and analysis skills in Python  
 
-Build an unsupervised machine learning model using K-Means
+---
 
-Provide actionable insights for business and marketing teams
+## Tools and Technologies
 
-Demonstrate clustering, visualization, and analysis skills in Python
+| Tool / Library | Purpose |
+|----------------|---------|
+| **Python** | Data analysis and modeling |
+| **Pandas / NumPy** | Data preparation and cleaning |
+| **Matplotlib / Seaborn** | Visualizations |
+| **Scikit-learn** | K-Means clustering and scaling |
+| **Jupyter Notebook** | Interactive analysis workflow |
 
-Tools and Technologies
-Tool / Library	Purpose
-Python	Data analysis and modeling
-Pandas / NumPy	Data preparation and cleaning
-Matplotlib / Seaborn	Visualizations
-Scikit-learn	K-Means clustering + feature scaling
-Jupyter Notebook	Interactive analysis workflow
-Repository Structure
+---
+
+## Repository Structure
+
 customer-segmentation-kmeans/
 │
-├── customer_segmentation.ipynb                # Main Jupyter Notebook (analysis + clustering)
-├── Mall_Customers.csv                         # Dataset
-├── README.md                                  # Project documentation
+├── customer_segmentation.ipynb # Main Jupyter notebook
+├── Mall_Customers.csv # Dataset
+├── README.md # Documentation
 │
-├── images/                                    # Visual outputs
-│   ├── elbow_method.png
-│   ├── segmentation_plot.png
-│   └── cluster_summary.png
+├── images/ # Visual outputs
+│ ├── elbow_method.png
+│ ├── segmentation_plot.png
+│ └── cluster_summary.png
 │
 └── report/
-    └── Customer_Segmentation_Executive_Summary.docx    # Business insights report
+└── Customer_Segmentation_Executive_Summary.docx
+---
 
-Dataset Description
+## Dataset Description
 
-The dataset includes key customer attributes:
+The dataset includes:
 
-Customer ID
-
-Gender
-
-Age
-
-Annual Income (k$)
-
-Spending Score (1–100)
+- Customer ID  
+- Gender  
+- Age  
+- Annual Income (k$)  
+- Spending Score (1–100)  
 
 Clustering was performed using:
 
-Annual Income (k$)
+- **Annual Income**  
+- **Spending Score**  
 
-Spending Score (1–100)
+---
 
-Data Preparation Steps
+## Data Preparation Steps
 
-Loaded dataset and inspected structure
+1. Loaded and inspected the dataset  
+2. Checked for missing values  
+3. Selected clustering features  
+4. Scaled values using StandardScaler  
+5. Prepared feature matrix for K-Means modeling  
 
-Checked for null values (none found)
+---
 
-Selected features for clustering
+## Elbow Method – Choosing the Optimal Number of Clusters
 
-Scaled values using StandardScaler
+The Elbow Method indicated **5 clusters** as the optimal balance.
 
-Prepared feature matrix for K-Means modeling
+### Elbow Method Plot  
+![Elbow Method](images/elbow_method.png)
 
-Elbow Method – Choosing Optimal Clusters
+---
 
-The Elbow Method indicated that 5 clusters offer the best balance of compactness and separation.
+## Customer Segmentation Results (K = 5)
 
-Elbow Method Plot
+### Segmentation Visualization  
+![Segmentation Plot](images/segmentation_plot.png)
 
-Customer Segmentation Results (K = 5)
+### Cluster Summary Table  
+![Cluster Summary](images/cluster_summary.png)
 
-K-Means produced five meaningful customer clusters based on income and spending patterns.
+---
 
-Segmentation Visualization
+## Cluster Interpretations
 
-Cluster Summary Table
+| Cluster | Description |
+|--------|-------------|
+| **1** | High income, high spending — premium/VIP customers |
+| **3** | High income, low spending — upsell opportunity |
+| **0** | Moderate income and moderate spending |
+| **2** | Moderate income, high spending |
+| **4** | Low income, low spending — budget-sensitive |
 
-Cluster Interpretations
-Cluster	Description
-1	High income, high spending — Premium / VIP customers
-3	High income, low spending — Upsell opportunity segment
-0	Moderate income, moderate spending
-2	Moderate income, high spending — Value-driven shoppers
-4	Low income, low spending — Budget-sensitive segment
-Business Insights & Recommendations
+---
 
-High-value customers (Cluster 1) respond well to exclusive offers and loyalty programs
+## Business Insights & Recommendations
 
-Low-income segments (Cluster 4) may require budget-friendly promotions
+- Engage high-value customers (Cluster 1) with loyalty programs  
+- Offer budget-friendly promotions for Cluster 4  
+- Upsell high-income but low-spending customers (Cluster 3)  
+- Tailor marketing strategies to behavioral segments  
+- Allocate marketing budgets efficiently using segmentation  
 
-High-income but low-spending customers (Cluster 3) are strong upsell candidates
+---
 
-Marketing campaigns should target behavior-based segments, not just demographics
+## Executive Report
 
-Segmentation supports optimized marketing spend and personalized experiences
+Full business-focused summary:  
+**report/Customer_Segmentation_Executive_Summary.docx**
 
-Executive Report
+---
 
-A full business-ready summary is available:
+## Future Enhancements
 
-📄 report/Customer_Segmentation_Executive_Summary.docx
+- Add demographic features (Age, Gender)  
+- Try alternative clustering algorithms  
+- Build an interactive Tableau/Power BI dashboard  
+- Create customer personas  
 
-Future Enhancements
+---
 
-Add demographic variables (Age, Gender) for deeper segmentation
+## Author
 
-Test alternative clustering algorithms (DBSCAN, Gaussian Mixture Models)
-
-Deploy dashboard in Power BI or Tableau
-
-Build customer personas based on behavior
-
-Author
-
-Sahro Haji
-Data Analytics Student
+**Sahro Haji**  
+Data Analytics Student  
 GitHub: https://github.com/SHAJI001
