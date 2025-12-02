@@ -30,19 +30,21 @@ The goal is to support targeted marketing, customer experience optimization, and
 
 ## Repository Structure
 
+```
 customer-segmentation-kmeans/
 │
-├── customer_segmentation.ipynb # Main Jupyter notebook
-├── Mall_Customers.csv # Dataset
-├── README.md # Documentation
+├── customer_segmentation.ipynb
+├── Mall_Customers.csv
+├── README.md
 │
-├── images/ # Visual outputs
-│ ├── elbow_method.png
-│ ├── segmentation_plot.png
-│ └── cluster_summary.png
+├── images/
+│   ├── elbow_method.png
+│   ├── segmentation_plot.png
+│   └── cluster_summary.png
 │
 └── report/
-└── Customer_Segmentation_Executive_Summary.docx
+    └── Customer_Segmentation_Executive_Summary.docx
+```
 ---
 
 ## Dataset Description
